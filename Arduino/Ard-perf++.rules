@@ -1,0 +1,137 @@
+
+(rules PCB Ard-perf++
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3586)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 508.0)
+    (clear 10.2)
+    (clear 254.0 (type smd_to_turn_gap))
+    (clear 2.6 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 508.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +5V "Net-(P5-Pad1)" "Net-(P6-Pad1)" "Net-(P7-Pad1)" "Net-(P8-Pad1)" +3V3 /15x25perf/J1 "Net-(JA1-Pad1)"
+    /15x25perf/JA /15x25perf/J2 "Net-(JA2-Pad1)" /15x25perf/J3 "Net-(JA3-Pad1)" /15x25perf/J4 "Net-(JA4-Pad1)" /15x25perf/J7
+    /15x25perf/JA7 /15x25perf/J8 /15x25perf/JA8 /15x25perf/J9 /15x25perf/JA9 /15x25perf/J10 /15x25perf/J11 /15x25perf/JA11
+    /15x25perf/J12 /15x25perf/JA12 /15x25perf/J13 /15x25perf/JA13 /15x25perf/J14 /15x25perf/JA14 /15x25perf/J15 /15x25perf/JA15
+    /15x25perf/J16 /15x25perf/JA16 /15x25perf/J17 "Net-(JA17-Pad1)" /15x25perf/J18 /15x25perf/JA18 /15x25perf/J19 /15x25perf/JA19
+    /15x25perf/J20 /15x25perf/JA20 /15x25perf/J21 /15x25perf/JA21 /15x25perf/J22 /15x25perf/JA22 /15x25perf/J23 /15x25perf/JA23
+    /15x25perf/J24 /15x25perf/JA24 /15x25perf/J25 /15x25perf/JA25 "Net-(JB1-Pad1)" /15x25perf/JB "Net-(JB2-Pad1)" "Net-(JB3-Pad1)"
+    "Net-(JB4-Pad1)" /15x25perf/J5 "Net-(JB5-Pad1)" /15x25perf/J6 "Net-(JB6-Pad1)" "Net-(JB7-Pad1)" "Net-(JB8-Pad1)" "Net-(JB9-Pad1)"
+    "Net-(JB10-Pad1)" "Net-(JB11-Pad1)" "Net-(JB12-Pad1)" "Net-(JB13-Pad1)" "Net-(JB14-Pad1)" "Net-(JB15-Pad1)" "Net-(JB16-Pad1)" "Net-(JB17-Pad1)"
+    "Net-(JB18-Pad1)" "Net-(JB19-Pad1)" "Net-(JB20-Pad1)" "Net-(JB21-Pad1)" "Net-(JB22-Pad1)" "Net-(JB23-Pad1)" "Net-(JB24-Pad1)" "Net-(JB25-Pad1)"
+    "Net-(JC1-Pad1)" /15x25perf/JC "Net-(JC2-Pad1)" "Net-(JC3-Pad1)" "Net-(JC4-Pad1)" "Net-(JC5-Pad1)" "Net-(JC6-Pad1)" "Net-(JC7-Pad1)"
+    "Net-(JC8-Pad1)" "Net-(JC9-Pad1)" "Net-(JC10-Pad1)" "Net-(JC11-Pad1)" "Net-(JC12-Pad1)" "Net-(JC13-Pad1)" "Net-(JC14-Pad1)" "Net-(JC15-Pad1)"
+    "Net-(JC16-Pad1)" "Net-(JC17-Pad1)" "Net-(JC18-Pad1)" "Net-(JC19-Pad1)" "Net-(JC20-Pad1)" "Net-(JC21-Pad1)" "Net-(JC22-Pad1)" "Net-(JC23-Pad1)"
+    "Net-(JC24-Pad1)" "Net-(JC25-Pad1)" "Net-(JD1-Pad1)" /15x25perf/JD "Net-(JD2-Pad1)" "Net-(JD3-Pad1)" "Net-(JD4-Pad1)" "Net-(JD5-Pad1)"
+    "Net-(JD6-Pad1)" "Net-(JD7-Pad1)" "Net-(JD8-Pad1)" "Net-(JD9-Pad1)" "Net-(JD10-Pad1)" "Net-(JD11-Pad1)" "Net-(JD12-Pad1)" "Net-(JD13-Pad1)"
+    "Net-(JD14-Pad1)" "Net-(JD15-Pad1)" "Net-(JD16-Pad1)" "Net-(JD17-Pad1)" "Net-(JD18-Pad1)" "Net-(JD19-Pad1)" "Net-(JD20-Pad1)" "Net-(JD21-Pad1)"
+    "Net-(JD22-Pad1)" "Net-(JD23-Pad1)" "Net-(JD24-Pad1)" "Net-(JD25-Pad1)" "Net-(JE1-Pad1)" /15x25perf/JE "Net-(JE2-Pad1)" "Net-(JE3-Pad1)"
+    "Net-(JE4-Pad1)" "Net-(JE5-Pad1)" "Net-(JE6-Pad1)" "Net-(JE7-Pad1)" "Net-(JE8-Pad1)" "Net-(JE9-Pad1)" "Net-(JE10-Pad1)" "Net-(JE11-Pad1)"
+    "Net-(JE12-Pad1)" "Net-(JE13-Pad1)" "Net-(JE14-Pad1)" "Net-(JE15-Pad1)" "Net-(JE16-Pad1)" "Net-(JE17-Pad1)" "Net-(JE18-Pad1)" "Net-(JE19-Pad1)"
+    "Net-(JE20-Pad1)" "Net-(JE21-Pad1)" "Net-(JE22-Pad1)" "Net-(JE23-Pad1)" "Net-(JE24-Pad1)" "Net-(JF1-Pad1)" /15x25perf/JF "Net-(JF2-Pad1)"
+    "Net-(JF3-Pad1)" "Net-(JF4-Pad1)" "Net-(JF5-Pad1)" "Net-(JF6-Pad1)" "Net-(JF7-Pad1)" "Net-(JF8-Pad1)" "Net-(JF9-Pad1)" "Net-(JF10-Pad1)"
+    "Net-(JF11-Pad1)" "Net-(JF12-Pad1)" "Net-(JF13-Pad1)" "Net-(JF14-Pad1)" "Net-(JF15-Pad1)" "Net-(JF16-Pad1)" "Net-(JF17-Pad1)" "Net-(JF18-Pad1)"
+    "Net-(JF19-Pad1)" "Net-(JF20-Pad1)" "Net-(JF21-Pad1)" "Net-(JF22-Pad1)" "Net-(JF23-Pad1)" "Net-(JF24-Pad1)" /15x25perf/J26 "Net-(JG1-Pad1)"
+    /15x25perf/JG "Net-(JG2-Pad1)" "Net-(JG3-Pad1)" "Net-(JG4-Pad1)" "Net-(JG5-Pad1)" "Net-(JG6-Pad1)" "Net-(JG7-Pad1)" "Net-(JG8-Pad1)"
+    "Net-(JG9-Pad1)" "Net-(JG10-Pad1)" "Net-(JG11-Pad1)" "Net-(JG12-Pad1)" "Net-(JG13-Pad1)" "Net-(JG14-Pad1)" "Net-(JG15-Pad1)" "Net-(JG16-Pad1)"
+    "Net-(JG17-Pad1)" "Net-(JG18-Pad1)" "Net-(JG19-Pad1)" "Net-(JG20-Pad1)" "Net-(JG21-Pad1)" "Net-(JG22-Pad1)" "Net-(JG23-Pad1)" "Net-(JG24-Pad1)"
+    "Net-(JH1-Pad1)" /15x25perf/JH "Net-(JH2-Pad1)" "Net-(JH3-Pad1)" "Net-(JH4-Pad1)" "Net-(JH5-Pad1)" "Net-(JH6-Pad1)" "Net-(JH7-Pad1)"
+    "Net-(JH8-Pad1)" "Net-(JH9-Pad1)" "Net-(JH10-Pad1)" "Net-(JH11-Pad1)" "Net-(JH12-Pad1)" "Net-(JH13-Pad1)" "Net-(JH14-Pad1)" "Net-(JH15-Pad1)"
+    "Net-(JH16-Pad1)" "Net-(JH17-Pad1)" "Net-(JH18-Pad1)" "Net-(JH19-Pad1)" "Net-(JH20-Pad1)" "Net-(JH21-Pad1)" "Net-(JH22-Pad1)" "Net-(JH23-Pad1)"
+    "Net-(JH24-Pad1)" "Net-(JH25-Pad1)" "Net-(JH26-Pad1)" "Net-(JI1-Pad1)" /15x25perf/JI "Net-(JI2-Pad1)" "Net-(JI3-Pad1)" "Net-(JI4-Pad1)"
+    "Net-(JI5-Pad1)" "Net-(JI6-Pad1)" "Net-(JI7-Pad1)" "Net-(JI8-Pad1)" "Net-(JI9-Pad1)" "Net-(JI10-Pad1)" "Net-(JI11-Pad1)" "Net-(JI12-Pad1)"
+    "Net-(JI13-Pad1)" "Net-(JI14-Pad1)" "Net-(JI15-Pad1)" "Net-(JI16-Pad1)" "Net-(JI17-Pad1)" "Net-(JI18-Pad1)" "Net-(JI19-Pad1)" "Net-(JI20-Pad1)"
+    "Net-(JI21-Pad1)" "Net-(JI22-Pad1)" "Net-(JI23-Pad1)" "Net-(JI24-Pad1)" "Net-(JI25-Pad1)" "Net-(JI26-Pad1)" "Net-(JK1-Pad1)" /15x25perf2/JK
+    "Net-(JK2-Pad1)" "Net-(JK3-Pad1)" "Net-(JK4-Pad1)" "Net-(JK5-Pad1)" "Net-(JK6-Pad1)" "Net-(JK7-Pad1)" "Net-(JK8-Pad1)" "Net-(JK9-Pad1)"
+    "Net-(JK10-Pad1)" "Net-(JK11-Pad1)" "Net-(JK12-Pad1)" "Net-(JK13-Pad1)" "Net-(JK14-Pad1)" "Net-(JK15-Pad1)" "Net-(JK16-Pad1)" "Net-(JK17-Pad1)"
+    "Net-(JK18-Pad1)" "Net-(JK19-Pad1)" "Net-(JK20-Pad1)" "Net-(JK21-Pad1)" "Net-(JK22-Pad1)" "Net-(JK23-Pad1)" "Net-(JK24-Pad1)" "Net-(JK25-Pad1)"
+    "Net-(JK26-Pad1)" "Net-(JL1-Pad1)" /15x25perf2/JL "Net-(JL2-Pad1)" "Net-(JL3-Pad1)" "Net-(JL4-Pad1)" "Net-(JL5-Pad1)" "Net-(JL6-Pad1)"
+    "Net-(JL7-Pad1)" "Net-(JL8-Pad1)" "Net-(JL9-Pad1)" "Net-(JL10-Pad1)" "Net-(JL11-Pad1)" "Net-(JL12-Pad1)" "Net-(JL13-Pad1)" "Net-(JL14-Pad1)"
+    "Net-(JL15-Pad1)" "Net-(JL16-Pad1)" "Net-(JL17-Pad1)" "Net-(JL18-Pad1)" "Net-(JL19-Pad1)" "Net-(JL20-Pad1)" "Net-(JL21-Pad1)" "Net-(JL22-Pad1)"
+    "Net-(JL23-Pad1)" "Net-(JL24-Pad1)" "Net-(JL25-Pad1)" "Net-(JL26-Pad1)" "Net-(JM1-Pad1)" /15x25perf2/JM "Net-(JM2-Pad1)" "Net-(JM3-Pad1)"
+    "Net-(JM4-Pad1)" "Net-(JM5-Pad1)" "Net-(JM6-Pad1)" "Net-(JM7-Pad1)" "Net-(JM8-Pad1)" "Net-(JM9-Pad1)" "Net-(JM10-Pad1)" "Net-(JM11-Pad1)"
+    "Net-(JM12-Pad1)" "Net-(JM13-Pad1)" "Net-(JM14-Pad1)" "Net-(JM15-Pad1)" "Net-(JM16-Pad1)" "Net-(JM17-Pad1)" "Net-(JM18-Pad1)" "Net-(JM19-Pad1)"
+    "Net-(JM20-Pad1)" "Net-(JM21-Pad1)" "Net-(JM22-Pad1)" "Net-(JM23-Pad1)" "Net-(JM24-Pad1)" "Net-(JM25-Pad1)" "Net-(JM26-Pad1)" "Net-(JN1-Pad1)"
+    /15x25perf2/JN "Net-(JN2-Pad1)" "Net-(JN3-Pad1)" "Net-(JN4-Pad1)" "Net-(JN5-Pad1)" "Net-(JN6-Pad1)" "Net-(JN7-Pad1)" "Net-(JN8-Pad1)"
+    "Net-(JN9-Pad1)" "Net-(JN10-Pad1)" "Net-(JN11-Pad1)" "Net-(JN12-Pad1)" "Net-(JN13-Pad1)" "Net-(JN14-Pad1)" "Net-(JN15-Pad1)" "Net-(JN16-Pad1)"
+    "Net-(JN17-Pad1)" "Net-(JN18-Pad1)" "Net-(JN19-Pad1)" "Net-(JN20-Pad1)" "Net-(JN21-Pad1)" "Net-(JN22-Pad1)" "Net-(JN23-Pad1)" "Net-(JN24-Pad1)"
+    "Net-(JN25-Pad1)" "Net-(JN26-Pad1)" "Net-(JO1-Pad1)" /15x25perf2/JO "Net-(JO2-Pad1)" "Net-(JO3-Pad1)" "Net-(JO4-Pad1)" "Net-(JO5-Pad1)"
+    "Net-(JO6-Pad1)" "Net-(JO7-Pad1)" "Net-(JO8-Pad1)" "Net-(JO9-Pad1)" "Net-(JO10-Pad1)" "Net-(JO11-Pad1)" "Net-(JO12-Pad1)" "Net-(JO13-Pad1)"
+    "Net-(JO14-Pad1)" "Net-(JO15-Pad1)" "Net-(JO16-Pad1)" "Net-(JO17-Pad1)" "Net-(JO18-Pad1)" "Net-(JO19-Pad1)" "Net-(JO20-Pad1)" "Net-(JO21-Pad1)"
+    "Net-(JO22-Pad1)" "Net-(JO23-Pad1)" "Net-(JO24-Pad1)" "Net-(JO25-Pad1)" "Net-(JO26-Pad1)" "Net-(JP1-Pad1)" /15x25perf2/JP "Net-(JP2-Pad1)"
+    "Net-(JP3-Pad1)" "Net-(JP4-Pad1)" "Net-(JP5-Pad1)" "Net-(JP6-Pad1)" "Net-(JP7-Pad1)" "Net-(JP8-Pad1)" "Net-(JP9-Pad1)" "Net-(JP10-Pad1)"
+    "Net-(JP11-Pad1)" "Net-(JP12-Pad1)" "Net-(JP13-Pad1)" "Net-(JP14-Pad1)" "Net-(JP15-Pad1)" "Net-(JP16-Pad1)" "Net-(JP17-Pad1)" "Net-(JP18-Pad1)"
+    "Net-(JP19-Pad1)" "Net-(JP20-Pad1)" "Net-(JP21-Pad1)" "Net-(JP22-Pad1)" "Net-(JP23-Pad1)" "Net-(JP24-Pad1)" "Net-(JQ1-Pad1)" /15x25perf2/JQ
+    "Net-(JQ2-Pad1)" "Net-(JQ3-Pad1)" "Net-(JQ4-Pad1)" "Net-(JQ5-Pad1)" "Net-(JQ6-Pad1)" "Net-(JQ7-Pad1)" "Net-(JQ8-Pad1)" "Net-(JQ9-Pad1)"
+    "Net-(JQ10-Pad1)" "Net-(JQ11-Pad1)" "Net-(JQ12-Pad1)" "Net-(JQ13-Pad1)" "Net-(JQ14-Pad1)" "Net-(JQ15-Pad1)" "Net-(JQ16-Pad1)" "Net-(JQ17-Pad1)"
+    "Net-(JQ18-Pad1)" "Net-(JQ19-Pad1)" "Net-(JQ20-Pad1)" "Net-(JQ21-Pad1)" "Net-(JQ22-Pad1)" "Net-(JQ23-Pad1)" "Net-(JQ24-Pad1)" "Net-(JR1-Pad1)"
+    /15x25perf2/JR "Net-(JR2-Pad1)" "Net-(JR3-Pad1)" "Net-(JR4-Pad1)" "Net-(JR7-Pad1)" "Net-(JR8-Pad1)" "Net-(JR9-Pad1)" "Net-(JR10-Pad1)"
+    /15x25perf2/JR11 /15x25perf2/JR12 /15x25perf2/JR13 /15x25perf2/JR18 "Net-(JR19-Pad1)" /15x25perf2/JR20 /15x25perf2/JR21 /15x25perf2/JR22
+    /15x25perf2/JR23 /15x25perf/JA10 /15x25perf2/JR16 /15x25perf2/JR24 /15x25perf2/JR25 "Net-(JJ1-Pad1)" /15x25perf/JJ "Net-(JJ2-Pad1)"
+    "Net-(JJ3-Pad1)" "Net-(JJ4-Pad1)" "Net-(JJ5-Pad1)" "Net-(JJ6-Pad1)" "Net-(JJ7-Pad1)" "Net-(JJ8-Pad1)" "Net-(JJ9-Pad1)" "Net-(JJ10-Pad1)"
+    "Net-(JJ11-Pad1)" "Net-(JJ12-Pad1)" "Net-(JJ13-Pad1)" "Net-(JJ14-Pad1)" "Net-(JJ15-Pad1)" "Net-(JJ16-Pad1)" "Net-(JJ17-Pad1)" "Net-(JJ18-Pad1)"
+    "Net-(JJ19-Pad1)" "Net-(JJ20-Pad1)" "Net-(JJ21-Pad1)" "Net-(JJ22-Pad1)" "Net-(JJ23-Pad1)" "Net-(JJ24-Pad1)" "Net-(JJ25-Pad1)" "Net-(JJ26-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 508.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

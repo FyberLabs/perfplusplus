@@ -1,0 +1,10 @@
+tmp
+.~*
+*~
+Archive*.zip
+*.zip
+*.raw
+*.log
+*.*bak
+*.*bck
+.DS_Store
