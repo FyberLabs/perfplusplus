@@ -458,7 +458,6 @@ Wire Wire Line
 	9400 2100 9300 2100
 Wire Wire Line
 	9400 2200 9300 2200
-Connection ~ 9300 2200
 Wire Wire Line
 	8950 2300 8950 1450
 Wire Wire Line
@@ -515,8 +514,6 @@ Wire Wire Line
 	10200 1500 10300 1500
 Wire Wire Line
 	10300 1500 10300 3150
-Wire Wire Line
-	9300 2100 9300 3150
 Wire Notes Line
 	8700 1000 11200 1000
 Wire Notes Line
@@ -700,10 +697,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 3150 5700 3150
 Wire Wire Line
-	5350 3300 5500 3300
-Wire Wire Line
-	5500 3300 5500 3150
-Connection ~ 5500 3150
+	5350 3300 5700 3300
 Wire Wire Line
 	5700 3000 5350 3000
 Wire Wire Line
@@ -732,7 +726,7 @@ Text Label 5550 2850 0    60   ~ 0
 3.3V
 Text Label 5550 3000 0    60   ~ 0
 5V
-Text Label 9300 3150 0    60   ~ 0
+Text Label 9300 2100 2    60   ~ 0
 GND1
 Text Label 10300 3150 0    60   ~ 0
 GND2
@@ -740,4 +734,8 @@ Text Label 5550 3150 0    60   ~ 0
 GND1
 Text Label 1250 3000 2    60   ~ 0
 GND2
+Text Label 5550 3300 0    60   ~ 0
+GND3
+Text Label 9300 2200 2    60   ~ 0
+GND3
 $EndSCHEMATC
